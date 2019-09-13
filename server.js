@@ -4,8 +4,8 @@ const app = express();
 const fs= require("fs");
 
 
-app.get("/ofir",(req, res)=> {
-    // res.send("<em style='color:pink; font-size:3rem';> ofir</em>")
+app.get("/",(req, res)=> {
+   
     fs.readFile('./index.html','utf8',(err,data)=>{
         if(err) throw err
         res.send(`${data}`);
